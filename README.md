@@ -1,16 +1,17 @@
 # MUNDI
 
-## Prueba técnica Sr FE 
+## Prueba técnica Sr FE
 
-### Tiempo estimado de resolución: `20 minutos`
+### Tiempo estimado de resolución: `30 minutos`
 
-Al finalizar el challenge se debe pushear a una nueva rama que se `challenge/[nombre del entrevistado]`
+Al finalizar el challenge se debe pushear a una nueva rama con el siguiente nombre `challenge/[nombre del entrevistado]`
 
+`Se debe utilizar las buenas prácticas de ECMAscript y principios SOLID.`
 
 A partir del siguiente objeto se requiere:
 
-
 Objeto inicial
+
 ```
 const transportOptions = {
   data: {
@@ -36,7 +37,6 @@ const transportOptions = {
 }
 
 ```
-
 
 Objeto esperado
 
@@ -99,21 +99,20 @@ Objeto esperado
 ```
 
 1- Formatear el objeto inicial y dejarlo como el esperado:
-* `data`: Por cada transporte se debe identificar que tipo de transporte es (land, air, maritime) por medio de una prop `type`.
 
-* `keys`: key de cada transporte.
+- `data`: Por cada transporte se debe identificar que tipo de transporte es (land, air, maritime) por medio de una prop `type`.
 
-* `transportType`: Listado de cada tipo de transporte aplicando upperCase.
+- `keys`: key de cada transporte.
 
+- `transportType`: Listado de cada tipo de transporte aplicando upperCase.
 
-2- Se debe mostrar junto a `"Tipos de medio de transporte": "LAND - AIR - MARITIME" `
+2- Se debe mostrar junto a `"Tipos de medio de transporte":` en string `"LAND - AIR - MARITIME"`
 
-3- El componente Select debe permitir seleccionar el transporte. Al seleccionarlo se debe reemplezar la leyenda `Selecciona un medio de transporte`, por la key del transporte seleccionado ej: 'car'.
+3- El componente Select debe mostrar cada transporte y permitir seleccionarlo.
 
-4- Por medio del transporte seleccionado se debe mostrar un ```<li>``` con cada key: value:
+4- Por medio del transporte seleccionado se debe mostrar un `<li>` con cada { key: value }
 
-
-5- Se debe agregar al buton 'limpiar', la funcionalidad de eliminar el seleccionado.
-
+5- Por medio del botón limpiar se debe eliminar el transporte seleccionado.
 
 Resultado esperado:
+![alt text](image.png)
