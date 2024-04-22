@@ -1,27 +1,62 @@
+import React, { useState } from 'react';
 import './App.css';
 
+const transportOptions = {
+  data: {
+    car: { amount: 100, description: 'Car' },
+    bus: { amount: 50, description: 'Bus' },
+    bike: { amount: 10, description: 'Bicycle' },
+    airplane: { amount: 500, description: 'Airplane' },
+    helicopter: { amount: 200, description: 'Helicopter' },
+    boat: { amount: 200, description: 'Boat' },
+    ship: { amount: 400, description: 'Ship' },
+    yacht: { amount: 1000, description: 'Yacht' }
+  },
+  transportType: {
+    car: 'land',
+    bus: 'land',
+    bike: 'land',
+    airplane: 'air',
+    helicopter: 'air',
+    boat: 'maritime',
+    ship: 'maritime',
+    yacht: 'maritime'
+  }
+}
+
 function App() {
+  const [selectedOption, setSelectedOption] = useState(null);
+  ;
+
+  /** 1 */
+  const transportOptionsFormatted = {}
+
+  console.log('transportOptionsFormatted', transportOptionsFormatted)
+
+  const handleChange = (event) => {
+    /** 3 */
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+      <p>Tipos de medio de transporte:
+        {/* 2- <span></span> */}
+      </p>
+      <div className='select-container'>
+        <label>Selecciona un medio de transporte</label>
+        <select value={selectedOption} onChange={handleChange}>
+          <option value="opcion1">Opción 1</option>
+          <option value="opcion2">Opción 2</option>
+          {/* 3-  
+          ....
+          */}
+        </select>
+
+        {/* 5- <button onClick={() => { }}>Limpiar</button> */}
+      </div>
+      {/* 4- {selectedOption && <ul>
+        <li>Opcion1: Valor1</li>
+      </ul>} */}
     </div>
   );
 }

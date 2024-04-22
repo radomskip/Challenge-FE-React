@@ -1,5 +1,18 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+ul{
+  text-align: left;
+}
+
+.select-container {
+  display: flex;
+  gap: 10px
 }
 
 .App-logo {
